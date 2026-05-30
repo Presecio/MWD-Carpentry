@@ -19,14 +19,16 @@
   --grey-light:#cccccc;
   --border:rgba(255,255,255,0.1);
 }
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
+*{min-width:0}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;width:100%;max-width:100%}
 
 /* TOP BAR */
 .top-bar{
   background:#000;padding:.55rem 2rem;
   display:flex;align-items:center;justify-content:center;gap:2.5rem;
   border-bottom:1px solid rgba(255,255,255,0.07);position:relative;z-index:101;
+  width:100%;max-width:100%;
 }
 .top-bar a{
   display:inline-flex;align-items:center;gap:.45rem;
@@ -37,7 +39,7 @@ body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);o
 .top-bar svg{width:15px;height:15px;fill:currentColor}
 
 /* NAV */
-nav{
+nav{width:100%;
   position:sticky;top:0;z-index:100;
   background:rgba(10,10,10,0.97);backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
@@ -220,7 +222,7 @@ section{padding:5.5rem 2rem}
 
 /* REVIEWS */
 .reviews-bg{background:var(--black)}
-.reviews-wrap{overflow:hidden;position:relative;margin-top:3.5rem}
+.reviews-wrap{overflow:hidden;position:relative;margin-top:3.5rem;width:100%;max-width:100vw}
 .reviews-wrap::before,.reviews-wrap::after{
   content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;
 }
